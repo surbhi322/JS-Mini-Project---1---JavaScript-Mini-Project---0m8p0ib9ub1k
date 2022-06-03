@@ -1,6 +1,3 @@
-@import url(//db.onlinewebfonts.com/c/b2e75c336df191233b3096682c9ee6be?family=PixelarRegularW01-Regular);
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     padding: 0;
     margin: 0;
@@ -15,7 +12,6 @@ body {
     top: 20px;
     left: 20px;
     color: white;
-    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: normal;
 }
@@ -60,22 +56,12 @@ body {
     cursor: pointer;
     border: 0;
 }
-#star {
-    background: url(/img/star.png);
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    background-position: center;
-    background-size: contain;
-}
-
 #game {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     background: url('/img/world.jpg');
     background-position: center left;
-    
 }
 #block {
     width: 45px;
@@ -111,7 +97,6 @@ body {
     animation: rotateDown 0.2s;
     animation-fill-mode:forwards;
 }
-
 @keyframes rotateUp {
     0% { transform: rotate( 0deg ) }
     100% { transform: rotate( -35deg ) }
@@ -120,36 +105,11 @@ body {
     0% { transform: rotate( 0deg ) }
     100% { transform: rotate( 35deg ) }
 }
-
-
 @keyframes blockAnimation {
     0% { left: 100vw; }
     100% { left: -50px; }
 }
-
-
 @keyframes backgroundAnimation {
     0% { background-position-x: 100vw }
     100% { background-position-x: 0 }
 }
-@keyframes starAnimation1 {
-    0% { left: 50vw; }
-    100% { left: -50px; }
-}
-@keyframes starAnimation2 {
-    0% { left: 60vw; }
-    100% { left: -50px; }
-}
-@keyframes starAnimation3 {
-    0% { left: 70vw; }
-    100% { left: -50px; }
-}
-@keyframes starAnimation4 {
-    0% { left: 80vw; }
-    100% { left: -50px; }
-}
-@keyframes starAnimation5 {
-    0% { left: 90vw; }
-    100% { left: -50px; }
-}
-
