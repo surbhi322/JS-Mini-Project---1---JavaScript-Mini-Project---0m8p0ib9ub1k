@@ -1,4 +1,4 @@
-import { getRandomNumber, getCssProp, l, detectColision, roundNum } from '/utils/utils.js';
+import { getRandomNumber, getCssProp, detectColision, roundNum } from '/utils/utils.js';
 Object.assign( window, {
     getRandomNumber,
     detectColision,
@@ -71,8 +71,6 @@ function handleCharacterAnimation( direction ) {
         character.classList.add('go-up');
     }
 }
-let numOfHoles = 0;
-let soundCount = 0;
 function handleCharacterCollisions() {
     const colisionBlock =  detectColision( character, block );
     const colisionHole =  detectColision( character, hole, { y1: -46, y2: 47 });
@@ -81,16 +79,8 @@ function handleCharacterCollisions() {
         return gameOver();
     }else if ( colisionHole ) {
         scoreTotal++;
-        soundCount++;
-        if ( soundCount > 35 ) {
-            soundCount = 0;
-        }
         changeScoreUi();
         if ( gameStopped ) return;
-        numOfHoles++ ;
-        if ( numOfHoles > 150  ) {
-            numOfHoles = 0;
-        }
     }
 }
 function handleCharacterPosition( diff ) {
