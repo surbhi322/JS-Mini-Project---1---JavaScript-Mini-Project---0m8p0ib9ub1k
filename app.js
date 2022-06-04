@@ -83,7 +83,6 @@ function handleCharacterCollisions() {
         scoreTotal++;
         soundCount++;
         if ( soundCount > 35 ) {
-            (new Audio('/sounds/hole.wav')).play();
             soundCount = 0;
         }
         changeScoreUi();
@@ -109,7 +108,6 @@ function characterJump() {
     const jumpInterval = setInterval(_ => {
         changeGameState({ diff: -3, direction: 'up' });
         if ( jumpCount > 20 ) {
-            (new Audio('/sounds/fly.wav')).play();
             clearInterval( jumpInterval );
             isJumping = false;
             jumpCount = 0;
@@ -141,7 +139,6 @@ function setEventListeners() {
     })
 }
 function gameOver() {
-    (new Audio('/sounds/gameover.wav')).play();
     gameStopped = true;
     showGameoverscreen();
     stopBlockAnimation();
