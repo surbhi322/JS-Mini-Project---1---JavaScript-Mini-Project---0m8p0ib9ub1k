@@ -22,7 +22,7 @@ function setInitialValues() {
 }
 function initRandomHoles() {
     hole.addEventListener( 'animationiteration', _ => {
-        const randomTop = getRandomNumber( 400, 650 );
+        const randomTop = getRandomNumber( 469, 700 );
         hole.style.top = `-${randomTop}px`;
     });
 } 
